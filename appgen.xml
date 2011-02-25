@@ -1,0 +1,42 @@
+<project name="test1" default="generate" xmlns:appgen="net.stax.appgen">
+    <typedef name="copy" classname="net.stax.appgen.CopyTask" uri="net.stax.appgen"/>
+    <typedef name="template" classname="net.stax.appgen.TemplateTask" uri="net.stax.appgen"/>
+    <defaultexcludes add=".bzr/**"/>
+    <defaultexcludes add=".bzrignore"/>
+    <defaultexcludes add="appgen*"/>
+    
+    <appgen:template id="apptemplate">
+        <property name="appid" value="${appid}" />
+        <property name="package" value="${package}" />
+    </appgen:template>
+    
+    <target name="generate">
+        <!-- Copy and process templatized files -->
+        <appgen:copy todir="${outputdir}/src" packagename="${package}">
+            <template refid="apptemplate" />
+            <fileset dir="src" />
+        </appgen:copy>
+        
+        <appgen:copy todir="${outputdir}">
+            <template refid="apptemplate" />
+            <fileset dir="${basedir}">
+                <include name=".project" />
+                <include name="build.xml" />
+                <include name="war/WEB-INF/web.xml" />
+                <include name="war/WEB-INF/stax-web.xml" />
+            </fileset>
+        </appgen:copy>
+    
+        <!-- Copy the remaining files (excluding templates) -->
+        <copy todir="${outputdir}" >
+            <fileset dir="${basedir}">
+                <exclude name="src/**" />
+                <exclude name=".project" />
+                <exclude name="build.xml" />
+                <exclude name="WEB-INF/web.xml" />
+                <exclude name="WEB-INF/stax-web.xml" />
+            </fileset>
+        </copy>
+    </target>
+
+</project>

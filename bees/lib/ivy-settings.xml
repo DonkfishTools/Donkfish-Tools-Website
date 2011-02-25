@@ -1,0 +1,19 @@
+<ivysettings>
+    <settings defaultResolver="staxResolvers" />  
+    <property name="local-m2-metadata-pattern" value="${user.home}/.m2/repository/[organisation]/[module]/[revision]/[module]-[revision].pom" override="false" />
+    <property name="local-m2-artifact-pattern" value="${user.home}/.m2/repository/[organisation]/[module]/[revision]/[module]-[revision].[ext]" override="false" />
+    
+    
+    <resolvers>
+        <chain name="staxResolvers">
+            <filesystem name="local-maven2" m2compatible="true" changingPattern=".*-SNAPSHOT">
+                <ivy pattern="${local-m2-metadata-pattern}"/>
+                <artifact pattern="${local-m2-artifact-pattern}"/>
+            </filesystem>
+            
+            <ibiblio name="codehaus" root="http://repository.codehaus.org/" m2compatible="true"/>
+            <ibiblio name="ibiblio" m2compatible="true"/>
+            <ibiblio name="java.net2" root="http://download.java.net/maven/2/" m2compatible="true"/>
+        </chain>
+    </resolvers>
+</ivysettings>

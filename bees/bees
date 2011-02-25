@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ "$BEES_HOME" == "" ]
+then
+ BEES_HOME=$STAX_HOME
+fi
+if [ "$BEES_HOME" == "" ]
+then
+ echo BEES_HOME is not set
+ exit 2
+fi
+GROOVY_HOME=$BEES_HOME/groovy
+STAX_HOME=$BEES_HOME
+
+export JAVA_OPTS="-Dbees.home=$BEES_HOME -Xmx256m"
+$GROOVY_HOME/bin/groovy -cp $BEES_HOME/scripts $BEES_HOME/scripts/bootstrap.groovy "$@"
+
