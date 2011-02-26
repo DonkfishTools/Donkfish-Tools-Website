@@ -1,6 +1,6 @@
-package com.donkfish.server;
+package com.donkfish.server.services;
 
-import com.donkfish.tools.client.GreetingService;
+import com.donkfish.tools.client.services.GreetingService;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**
@@ -8,7 +8,7 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
  */
 @SuppressWarnings("serial")
 public class GreetingServiceImpl extends RemoteServiceServlet implements
-    GreetingService {
+        GreetingService {
 
   public String greetServer(String input) {
     String serverInfo = getServletContext().getServerInfo();

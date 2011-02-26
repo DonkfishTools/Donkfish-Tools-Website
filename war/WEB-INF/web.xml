@@ -7,7 +7,7 @@
   <!-- Servlets -->
   <servlet>
     <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.donkfish.server.GreetingServiceImpl</servlet-class>
+    <servlet-class>com.donkfish.server.services.GreetingServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
@@ -15,8 +15,14 @@
     <url-pattern>/t/greet</url-pattern>
   </servlet-mapping>
 
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>MyApp.html</welcome-file>
-  </welcome-file-list>
+      <servlet>
+    <servlet-name>toolsServlet</servlet-name>
+    <servlet-class>com.donkfish.server.servlets.ToolsMappingServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>toolsServlet</servlet-name>
+    <url-pattern>/tools/*</url-pattern>
+  </servlet-mapping>
+
 </web-app>

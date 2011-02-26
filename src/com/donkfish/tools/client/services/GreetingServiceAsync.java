@@ -1,4 +1,4 @@
-package com.donkfish.tools.client;
+package com.donkfish.tools.client.services;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
