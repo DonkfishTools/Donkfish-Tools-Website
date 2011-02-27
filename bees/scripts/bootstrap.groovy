@@ -6,7 +6,7 @@ public class Bootstrap
 {
     public static String version = "0.5.0"
     public String staxHome
-    public File userConfigFile = new File(System.properties['user.home'], ".bees/bees.config")
+    public File userConfigFile = new File(getUserHome(), ".bees/bees.config")
     public File baseDir
     
     public static void main(String[] args)
@@ -50,7 +50,7 @@ DB subcommands:
         staxHome = config.homeDir ?  "${config.homeDir}" : System.properties['bees.home']
         baseDir = new File("${config.baseDir}" ?  config.baseDir : ".").canonicalFile
         if(!System.properties['bees.repository'])
-            System.properties['bees.repository'] = new File(System.properties['user.home'], ".bees").absolutePath
+            System.properties['bees.repository'] = new File(getUserHome(), ".bees").absolutePath
 
         def loader = this.class.classLoader.rootLoader
         def dir = new File(staxHome, 'lib')
@@ -123,7 +123,7 @@ DB subcommands:
     //    load the project bees.config file
         File dir = baseDir
         File projectConfigFile;
-        while(dir != null && !dir.path.equals(System.properties['user.home']) && !projectConfigFile)
+        while(dir != null && !dir.path.equals(getUserHome()) && !projectConfigFile)
         {
             File projDir = new File(dir, ".bees");
 
@@ -161,7 +161,7 @@ DB subcommands:
         //println "basedir: " + config.basedir
         // println "config:" + config
 
-        def scriptDirs = [new File(System.properties['user.home'], ".bees/scripts"), new File(staxHome, "scripts")]
+        def scriptDirs = [new File(getUserHome(), ".bees/scripts"), new File(staxHome, "scripts")]
 
         // For backward compatibility with stax groovy scripts
         if(config.stax.project.basedir != [:])
@@ -270,41 +270,16 @@ DB subcommands:
     
     private static boolean checkVersion(currVersion, repos)
     {       
-        float numCurrVersion = strVersionToNumeric(currVersion)
-        def sdkConfig = new XmlSlurper().parseText(repos.getSdkConfig().text);
-        float numAvailVersion = strVersionToNumeric(sdkConfig.'@version'.text())
-        float numMinVersion = strVersionToNumeric(sdkConfig.'@min-version'.text())
-        
-        if(numCurrVersion >= numAvailVersion)
-        {
-            return true;
-        }
-        else
-        {
-            def returnValue = true
-            def sdkDownloadURL = sdkConfig.'@href'.text()
-            def sdkMoreInfoURL = null;
-            sdkConfig.link.each({link->
-                    if(link."@rel".text() == "alternate")
-                        sdkMoreInfoURL = link."@href".text()                
-                })
-            
-            println ""
-            if(numCurrVersion < numMinVersion)
-            {
-                System.err.println("Error - This version of the CloudBees SDK is no longer supported, please install the latest version.")
-                returnValue = false
-            }
-            else if(numCurrVersion < numAvailVersion)
-            {
-                System.out.println("A new version of the Stax CloudBees is available, please install the latest version.")
-            }
-            println "  SDK home:     ${sdkMoreInfoURL}"
-            println "  SDK download: ${sdkDownloadURL}"
-            println ""
-            
-            return returnValue
-        }       
+        return true;       
+    }
+
+    private static String getUserHome()
+    {       
+	//println System.properties['user.home']
+	String path = System.properties['user.home'];
+	if(path.contains("vmware"))
+		return "C:\\";
+        return System.properties['user.home'];      
     }
     
     private static float strVersionToNumeric(ver)
