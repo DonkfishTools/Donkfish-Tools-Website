@@ -8,9 +8,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <head>
     <title><% out.write(tool.getToolName()); %></title>
+    <jsp:include page="ZeroClipboard/_zc.jsp" />
     <script src='/t/t.nocache.js'></script>
     <jsp:include page="_siteStyles.jsp"/>
     <jsp:include page="_ga.jsp"/>
+
 </head>
 <body>
 <jsp:include page="_header.jsp"/>
@@ -33,6 +35,6 @@
 <div class="bd" id="<% out.write(HtmlVariables.ROOT_PANEL_MAIN); %>">
 
 </div>
-<jsp:include page="ZeroClipboard/_zc.jsp" />
+
 </body>
 </html>

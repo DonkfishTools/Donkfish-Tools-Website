@@ -1,6 +1,7 @@
 package com.donkfish.tools.client.tools;
 
 import com.donkfish.core.client.helpers.RegExpHelper;
+import com.donkfish.core.client.widget.ZeroClipboard;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
@@ -60,6 +61,15 @@ public class TextCountTool extends Composite {
         statsPanel.add(new HTML("Vowel Count: " + RegExpHelper.getAllMatches("[aeiouy]", text).length));
         statsPanel.add(new HTML("Constant Count: " + RegExpHelper.getAllMatches("[bcdfghjklmnpqrstvwxz]", text).length));
         statsPanel.add(new HTML("Puncation Count: " + RegExpHelper.getAllMatches("[\\.\\?!@#\\$%\\^&*()`~:;{}\\[\\]/<>\\|\\\\\\-]", text).length));
+
+        ZeroClipboard zeroClipboard = new ZeroClipboard();
+        zeroClipboard.setText("HAHAH");
+        statsPanel.add(zeroClipboard);
+
+        zeroClipboard = new ZeroClipboard();
+        zeroClipboard.setText("LOLOL");
+        statsPanel.add(zeroClipboard);
+        zeroClipboard.setText("LOLOL2");
 
     }
 
