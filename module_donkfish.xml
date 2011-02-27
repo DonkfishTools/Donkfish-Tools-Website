@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_donkfish" default="compile.module.donkfish">
+  <dirname property="module.donkfish.basedir" file="${ant.file.module_donkfish}"/>
+  
+  <property name="module.jdk.home.donkfish" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.donkfish" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.donkfish" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.donkfish" value="${compiler.args}"/>
+  
+  <property name="donkfish.output.dir" value="${module.donkfish.basedir}/out/production/Donkfish"/>
+  <property name="donkfish.testoutput.dir" value="${module.donkfish.basedir}/out/test/Donkfish"/>
+  
+  <path id="donkfish.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="donkfish.module.production.classpath">
+    <path refid="library.gwt-2.2.0.classpath"/>
+    <pathelement location="${basedir}/war/WEB-INF/lib/gwt-servlet.jar"/>
+    <path refid="library.gwt-user.classpath"/>
+    <pathelement location="${basedir}/../../gwt-2.2.0"/>
+    <pathelement location="${basedir}/../gwt-2.2.0"/>
+  </path>
+  
+  <path id="donkfish.runtime.production.module.classpath">
+    <pathelement location="${donkfish.output.dir}"/>
+    <path refid="library.gwt-2.2.0.classpath"/>
+    <pathelement location="${basedir}/war/WEB-INF/lib/gwt-servlet.jar"/>
+    <path refid="library.gwt-user.classpath"/>
+    <pathelement location="${basedir}/../../gwt-2.2.0"/>
+    <pathelement location="${basedir}/../gwt-2.2.0"/>
+  </path>
+  
+  <path id="donkfish.module.classpath">
+    <pathelement location="${donkfish.output.dir}"/>
+    <path refid="library.gwt-2.2.0.classpath"/>
+    <pathelement location="${basedir}/war/WEB-INF/lib/gwt-servlet.jar"/>
+    <path refid="library.gwt-user.classpath"/>
+    <pathelement location="${basedir}/../../gwt-2.2.0"/>
+    <pathelement location="${basedir}/../gwt-2.2.0"/>
+  </path>
+  
+  <path id="donkfish.runtime.module.classpath">
+    <pathelement location="${donkfish.testoutput.dir}"/>
+    <pathelement location="${donkfish.output.dir}"/>
+    <path refid="library.gwt-2.2.0.classpath"/>
+    <pathelement location="${basedir}/war/WEB-INF/lib/gwt-servlet.jar"/>
+    <path refid="library.gwt-user.classpath"/>
+    <pathelement location="${basedir}/../../gwt-2.2.0"/>
+    <pathelement location="${basedir}/../gwt-2.2.0"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.donkfish">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.donkfish">
+    <patternset refid="excluded.from.module.donkfish"/>
+  </patternset>
+  
+  <path id="donkfish.module.sourcepath">
+    <dirset dir="${module.donkfish.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.donkfish" depends="compile.module.donkfish.production,compile.module.donkfish.tests" description="Compile module Donkfish"/>
+  
+  <target name="compile.module.donkfish.production" depends="register.custom.compilers" description="Compile module Donkfish; production classes">
+    <mkdir dir="${donkfish.output.dir}"/>
+    <javac2 destdir="${donkfish.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.donkfish}/javac">
+      <compilerarg line="${compiler.args.donkfish}"/>
+      <bootclasspath refid="donkfish.module.bootclasspath"/>
+      <classpath refid="donkfish.module.production.classpath"/>
+      <src refid="donkfish.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.donkfish"/>
+    </javac2>
+    
+    <copy todir="${donkfish.output.dir}">
+      <fileset dir="${module.donkfish.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.donkfish.tests" depends="register.custom.compilers,compile.module.donkfish.production" description="compile module Donkfish; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.donkfish" description="cleanup module">
+    <delete dir="${donkfish.output.dir}"/>
+    <delete dir="${donkfish.testoutput.dir}"/>
+  </target>
+</project>

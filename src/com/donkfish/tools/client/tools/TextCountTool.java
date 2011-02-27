@@ -53,7 +53,7 @@ public class TextCountTool extends Composite {
     private void updateStats() {
         String text = textArea.getText();
         statsPanel.clear();
-        statsPanel.add(new HTML("Char Count w/ Spaces: " + RegExpHelper.getAllMatches(".", text).length));
+        statsPanel.add(new HTML("CharRRR Count w/ Spaces: " + RegExpHelper.getAllMatches(".", text).length));
         statsPanel.add(new HTML("Char Count w/o Spaces: " + RegExpHelper.getAllMatches("[^\\s]", text).length));
         statsPanel.add(new HTML("Letter Count w/ Spaces: " + RegExpHelper.getAllMatches("[a-zA-Z]", text).length));
         statsPanel.add(new HTML("Digit Count w/ Spaces: " + RegExpHelper.getAllMatches("[0-9]", text).length));
