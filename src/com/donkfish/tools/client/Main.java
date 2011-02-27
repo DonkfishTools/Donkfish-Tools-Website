@@ -4,7 +4,7 @@ import com.donkfish.core.client.constants.HtmlVariables;
 import com.donkfish.core.client.tools.ToolsManager;
 import com.donkfish.tools.client.services.GreetingService;
 import com.donkfish.tools.client.services.GreetingServiceAsync;
-import com.donkfish.tools.client.tools.ToolWidgetFactor;
+import com.donkfish.tools.client.tools.ToolWidgetFactory;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Document;
@@ -23,7 +23,7 @@ public class Main implements EntryPoint {
       if(panel != null)
       {
           String toolKey = Document.get().getElementById(HtmlVariables.KEY).getAttribute("value").toString();
-          panel.add(ToolWidgetFactor.getWidget(toolKey));
+          panel.add(ToolWidgetFactory.getWidget(toolKey));
       }
       else
       {
