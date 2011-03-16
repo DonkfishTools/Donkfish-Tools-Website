@@ -33,4 +33,7 @@
     #desc li:after { content:", " }
     #desc li:last-child:after { content:"" }
     .bd {padding:15px;}
+
+
+    .gwt-Image {border:0}
 </style>

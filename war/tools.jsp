@@ -8,11 +8,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <head>
     <title><% out.write(tool.getToolName()); %></title>
-    <jsp:include page="ZeroClipboard/_zc.jsp" />
+    <jsp:include page="/ZeroClipboard/_zc.jsp" />
     <script src='/t/t.nocache.js'></script>
-    <jsp:include page="_siteStyles.jsp"/>
-    <jsp:include page="_ga.jsp"/>
-
+    <jsp:include page="/_siteStyles.jsp"/>
+    <jsp:include page="/_ga.jsp"/>
+    <jsp:include page="/prettydiff/_prettydiff.jsp"/>
+    <jsp:include page="/code-prettify/_code-prettify.jsp"/>
 </head>
 <body>
 <jsp:include page="_header.jsp"/>
@@ -25,7 +26,7 @@
     <h2>Related Tools</h2>
 
     <ul>
-        <li><a href="">Some Tool</a></li>
+        <li><a href="">Some Tool2</a></li>
         <li><a href="">Some Tool</a></li>
         <li><a href="">Some Tool</a></li>
         <li><a href="">Some Tool</a></li>

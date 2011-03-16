@@ -1,14 +1,10 @@
-package com.donkfish.tools.client.tools;
+package com.donkfish.tools.client.tools.textcount;
 
 import com.donkfish.core.client.helpers.RegExpHelper;
-import com.donkfish.core.client.widget.ZeroClipboard;
+import com.donkfish.core.client.helpers.SpringHelper;
+import com.donkfish.core.client.helpers.StringCounter;
+import com.donkfish.core.client.widget.progress.LoadingSmall;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.KeyUpEvent;
-import com.google.gwt.event.dom.client.KeyUpHandler;
-import com.google.gwt.event.logical.shared.ValueChangeEvent;
-import com.google.gwt.event.logical.shared.ValueChangeHandler;
-import com.google.gwt.regexp.shared.MatchResult;
-import com.google.gwt.regexp.shared.RegExp;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.user.client.ui.Composite;
@@ -21,32 +17,35 @@ public class TextCountTool extends Composite {
     VerticalPanel mainPanel = new VerticalPanel();
     TextArea textArea;
     VerticalPanel statsPanel;
+    LoadingSmall loading;
 
     public TextCountTool() {
         textArea = new TextArea();
         textArea.setHeight("300px");
         textArea.setWidth("500px");
         textArea.addStyleName(RES.styles().textArea());
-        textArea.addValueChangeHandler(new ValueChangeHandler<String>() {
-            public void onValueChange(ValueChangeEvent<String> stringValueChangeEvent) {
+
+        SpringHelper.attachSpring(textArea, 400, new SpringHelper.SpringCallback() {
+            public void run() {
                 updateStats();
+                loading.showBody();
+            }
+
+            public void activity() {
+                loading.showLoading();
             }
         });
-        textArea.addKeyUpHandler(new KeyUpHandler() {
-            public void onKeyUp(KeyUpEvent keyUpEvent) {
-                if(textArea.getText().length() < 3000)
-                    updateStats();
-            }
-        });
+
         mainPanel.add(textArea);
 
         statsPanel = new VerticalPanel();
         textArea.addStyleName(RES.styles().statsPanel());
-
-        mainPanel.add(statsPanel);
-
         updateStats();
 
+
+        loading = new LoadingSmall(statsPanel);
+
+        mainPanel.add(loading);
         initWidget(mainPanel);
     }
 
@@ -55,21 +54,30 @@ public class TextCountTool extends Composite {
         statsPanel.clear();
         statsPanel.add(new HTML("CharRRR Count w/ Spaces: " + RegExpHelper.getAllMatches(".", text).length));
         statsPanel.add(new HTML("Char Count w/o Spaces: " + RegExpHelper.getAllMatches("[^\\s]", text).length));
-        statsPanel.add(new HTML("Letter Count w/ Spaces: " + RegExpHelper.getAllMatches("[a-zA-Z]", text).length));
-        statsPanel.add(new HTML("Digit Count w/ Spaces: " + RegExpHelper.getAllMatches("[0-9]", text).length));
-        statsPanel.add(new HTML("Word Count: " + RegExpHelper.getAllMatches("[^\\.\\?!@#\\$%\\^&*()`~:;{}\\[\\]/<>\\|\\\\+\\-\\s]", text).length));
+        statsPanel.add(new HTML("Letter Count: " + RegExpHelper.getAllMatches("[a-zA-Z]", text).length));
+        statsPanel.add(new HTML("Digit Count: " + RegExpHelper.getAllMatches("[0-9]", text).length));
+        String[] words = RegExpHelper.getAllMatches("\\b(\\d+(,|\\.)?)+|([a-z]\\.)+|[\\w']+\\b", text);
+
+        StringCounter counter = new StringCounter(words);
+
+        statsPanel.add(new HTML("Word Count: " + counter.getTotal()));
+        statsPanel.add(new HTML("Unique Word Count: " + counter.getUnique()));
         statsPanel.add(new HTML("Vowel Count: " + RegExpHelper.getAllMatches("[aeiouy]", text).length));
         statsPanel.add(new HTML("Constant Count: " + RegExpHelper.getAllMatches("[bcdfghjklmnpqrstvwxz]", text).length));
         statsPanel.add(new HTML("Puncation Count: " + RegExpHelper.getAllMatches("[\\.\\?!@#\\$%\\^&*()`~:;{}\\[\\]/<>\\|\\\\\\-]", text).length));
 
-        ZeroClipboard zeroClipboard = new ZeroClipboard();
-        zeroClipboard.setText("HAHAH");
-        statsPanel.add(zeroClipboard);
 
-        zeroClipboard = new ZeroClipboard();
-        zeroClipboard.setText("LOLOL");
-        statsPanel.add(zeroClipboard);
-        zeroClipboard.setText("LOLOL2");
+        VerticalPanel wordPanel = new VerticalPanel();
+
+        statsPanel.add(wordPanel);
+
+        for(StringCounter.StringCountValue value : counter.getValues())
+        {
+            wordPanel.add(new HTML(value.toString() + " :: " + value.getCount()));
+        }
+
+
+
 
     }
 

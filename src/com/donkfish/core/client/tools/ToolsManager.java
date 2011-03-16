@@ -8,6 +8,7 @@ public class ToolsManager {
     public static final String TOOL_KEY_WORD_COUNT = "Word_Count";
     public static final String TOOL_KEY_CHAR_COUNT = "Char_Count";
     public static final String TOOL_KEY_LETTER_COUNT = "Letter_Count";
+    public static final String TOOL_KEY_TABLE_CREATOR = "Table_Creator";
     public static final String TOOL_KEY_SUM_TOOL = "Sum";
     public static final String TOOL_KEY_MEAN_TOOL = "Mean";
     public static final String TOOL_KEY_MEDIAN_TOOLS = "Median";
@@ -40,6 +41,7 @@ public class ToolsManager {
             tools.put(TOOL_KEY_WORD_COUNT, new Tool("Word Count", "You can get the number of words", ""));
             tools.put(TOOL_KEY_CHAR_COUNT, new Tool("Char Count", "You can get the number of chars", ""));
             tools.put(TOOL_KEY_LETTER_COUNT, new Tool("Letter Count", "You can get the number of letters", ""));
+            tools.put(TOOL_KEY_TABLE_CREATOR, new Tool("Table Creator", "Create HTML quickly", ""));
             tools.put(TOOL_KEY_SUM_TOOL, new Tool("Sum Tool", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_MEAN_TOOL, new Tool("Mean Tool", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_MEDIAN_TOOLS, new Tool("Medium Tool", "Add up all the numbers in a list", ""));
