@@ -11,9 +11,10 @@ public class ToolsManager {
     public static final String TOOL_KEY_TABLE_CREATOR = "Table_Creator";
     public static final String TOOL_KEY_SUM_TOOL = "Sum";
     public static final String TOOL_KEY_MEAN_TOOL = "Mean";
-    public static final String TOOL_KEY_MEDIAN_TOOLS = "Median";
+    public static final String TOOL_KEY_MEDIAN_TOOL = "Median";
     public static final String TOOL_KEY_MODE_TOOL = "Mode";
     public static final String TOOL_KEY_SORT_TOOL = "Sort_List";
+    public static final String TOOL_KEY_RANDOMIZE_TOOL = "Randomize_List";
     public static final String TOOL_KEY_UPPERCASE_TOOL = "Uppercase_Text";
     public static final String TOOL_KEY_LOWERCASE_TOOL = "Lowercase_Text";
     public static final String TOOL_KEY_BASE64_ENCODER_TOOL = "Base64_Encoder";
@@ -30,11 +31,24 @@ public class ToolsManager {
     public static final String TOOL_KEY_HTML_PRETTY = "Html_Pretty";
     public static final String TOOL_KEY_XML_PRETTY = "Xml_Pretty";
     public static final String TOOL_KEY_CSS_PRETTY = "Css_Pretty";
+    public static final String TOOL_KEY_TITLECASE_TOOL = "Title_Case";
+    public static final String TOOL_KEY_PROPERCASE_TOOL = "Proper_Case";
 
+
+    public static HashMap<String, Tool> getTools() {
+        initToolMap();
+        return tools;
+    }
 
     private static final HashMap<String, Tool> tools = new HashMap<String, Tool>();
 
     public static Tool getTool(String key)
+    {
+        initToolMap();
+        return tools.get(key);
+    }
+
+    private static void initToolMap()
     {
         if(tools.size() == 0)
         {
@@ -44,11 +58,14 @@ public class ToolsManager {
             tools.put(TOOL_KEY_TABLE_CREATOR, new Tool("Table Creator", "Create HTML quickly", ""));
             tools.put(TOOL_KEY_SUM_TOOL, new Tool("Sum Tool", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_MEAN_TOOL, new Tool("Mean Tool", "Add up all the numbers in a list", ""));
-            tools.put(TOOL_KEY_MEDIAN_TOOLS, new Tool("Medium Tool", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_MEDIAN_TOOL, new Tool("Medium Tool", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_MODE_TOOL, new Tool("Mode Tool", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_SORT_TOOL, new Tool("Sort Tool", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_RANDOMIZE_TOOL, new Tool("Randomize Tool", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_UPPERCASE_TOOL, new Tool("Uppercase Text", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_LOWERCASE_TOOL, new Tool("Lowercase Text", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_TITLECASE_TOOL, new Tool("Title Text", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_PROPERCASE_TOOL, new Tool("Proper Text", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_BASE64_ENCODER_TOOL, new Tool("Base64 Encoder", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_BASE64_DECODER_TOOL, new Tool("Base64 Encoder", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_HTML_ENCODER, new Tool("HTML Encoder", "Add up all the numbers in a list", ""));
@@ -64,7 +81,5 @@ public class ToolsManager {
             tools.put(TOOL_KEY_XML_PRETTY, new Tool("XML Pretty Print", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_CSS_PRETTY, new Tool("CSS Pretty Print", "Add up all the numbers in a list", ""));
         }
-
-        return tools.get(key);
     }
 }

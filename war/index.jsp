@@ -1,3 +1,7 @@
+<%@ page import="com.donkfish.core.client.tools.ToolsManager" %>
+<%@ page import="com.donkfish.core.client.model.Tool" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %>
 <%--
   Created by IntelliJ IDEA.
   User: brandonturner
@@ -14,5 +18,15 @@
 </head>
 <body>
 <jsp:include page="_header.jsp"/>
+<ul>
+    <%
+
+        for(Map.Entry<String, Tool> tool : ToolsManager.getTools().entrySet())
+        {
+            out.print("<li><a href='/tools/" + tool.getKey() + "'>" + tool.getValue().getToolName() + "</a></li>");
+        }
+
+    %>
+</ul>
 </body>
 </html>

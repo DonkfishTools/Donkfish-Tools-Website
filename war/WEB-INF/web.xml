@@ -6,13 +6,13 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.donkfish.server.services.GreetingServiceImpl</servlet-class>
+    <servlet-name>DonkfishRemote</servlet-name>
+    <servlet-class>com.donkfish.server.services.DonkfishServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/t/greet</url-pattern>
+    <servlet-name>DonkfishRemote</servlet-name>
+    <url-pattern>/donk</url-pattern>
   </servlet-mapping>
 
       <servlet>
