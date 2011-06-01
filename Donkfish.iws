@@ -15,27 +15,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="036b9dfd-413e-4ec8-825c-736f63dc4ba4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/casing/CaseChangeTool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/lists/ListTool.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/lists/ListTool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/NumberListTool.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/NumberListTool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/RandomNumberTool.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/RandomNumberTool.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/donkfish/server/services/GreetingServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/donkfish/server/services/DonkfishServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/donkfish/tools/client/services/GreetingService.java" afterPath="$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishRemoteService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/donkfish/tools/client/services/GreetingServiceAsync.java" afterPath="$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishRemoteServiceAsync.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donkfish/core/client/helpers/Analytics.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/_footer.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Donkfish.iws" afterPath="$PROJECT_DIR$/Donkfish.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/core/client/tools/ToolsManager.java" afterPath="$PROJECT_DIR$/src/com/donkfish/core/client/tools/ToolsManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/tools/client/Main.java" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/ToolWidgetFactory.java" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/ToolWidgetFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/core/client/widget/clipboard/ZeroClipboard.css" afterPath="$PROJECT_DIR$/src/com/donkfish/core/client/widget/clipboard/ZeroClipboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/core/client/widget/clipboard/ZeroClipboard.java" afterPath="$PROJECT_DIR$/src/com/donkfish/core/client/widget/clipboard/ZeroClipboard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.css" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.java" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.css" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.java" afterPath="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/_siteStyles.jsp" afterPath="$PROJECT_DIR$/war/_siteStyles.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/index.jsp" afterPath="$PROJECT_DIR$/war/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/tools.jsp" afterPath="$PROJECT_DIR$/war/tools.jsp" />
     </list>
     <ignored path="Donkfish.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,6 +38,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager" choice="3" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
     <option name="REVERSE_PATCH" value="false" />
@@ -94,104 +87,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RandomNumberTool.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/RandomNumberTool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="926" selection-end="926" vertical-scroll-proportion="8.131147">
+            <state line="34" column="6" selection-start="1225" selection-end="1225" vertical-scroll-proportion="-12.24">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DonkfishRemoteService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishRemoteService.java">
+      <file leaf-file-name="_footer.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/_footer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="9" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+            <state line="0" column="91" selection-start="91" selection-end="91" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DonkfishService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishService.java">
+      <file leaf-file-name="_siteStyles.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/_siteStyles.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
+            <state line="9" column="21" selection-start="289" selection-end="289" vertical-scroll-proportion="-5.76">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tools.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/tools.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="10" selection-start="601" selection-end="601" vertical-scroll-proportion="-5.08">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ga.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/_ga.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Analytics.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/helpers/Analytics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="5" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1306894523000" expanded="true" signature="350:514" placeholder="{...}" />
+                <marker date="1306894523000" expanded="true" signature="570:709" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.gwt.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/module.gwt.xml">
+      <file leaf-file-name="TextCountTool.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="45" column="99" selection-start="2126" selection-end="2126" vertical-scroll-proportion="6.2325583">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stax-web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/WEB-INF/stax-web.xml">
+      <file leaf-file-name="TextCountTool.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="5" column="22" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="SpringTextBoxTool.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="25" selection-start="627" selection-end="627" vertical-scroll-proportion="-13.090909">
+            <state line="57" column="20" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolsMappingServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/donkfish/server/servlets/ToolsMappingServlet.java">
+      <file leaf-file-name="SpringTextBoxTool.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DonkfishServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/donkfish/server/services/DonkfishServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DonkfishRemoteServiceAsync.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishRemoteServiceAsync.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="17" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
+            <state line="11" column="1" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -207,27 +190,26 @@
   <component name="Git.Settings">
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
-    <option name="LINE_SEPARATORS_CONVERSION" value="NONE" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.css" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/NumberListTool.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/lists/ListTool.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/MutableTextTool.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/core/client/tools/ToolsManager.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/casing/CaseChangeTool.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/ToolWidgetFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/core/client/services/GreetingService.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishRemoteServiceAsync.java" />
-        <option value="$PROJECT_DIR$/src/com/donkfish/server/services/GreetingServiceImpl.java" />
         <option value="$PROJECT_DIR$/war/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishRemoteService.java" />
         <option value="$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishService.java" />
         <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/RandomNumberTool.java" />
+        <option value="$PROJECT_DIR$/src/com/donkfish/core/client/tools/ToolsManager.java" />
+        <option value="$PROJECT_DIR$/war/_siteStyles.jsp" />
+        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.css" />
+        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.java" />
+        <option value="$PROJECT_DIR$/src/com/donkfish/core/client/widget/clipboard/ZeroClipboard.java" />
+        <option value="$PROJECT_DIR$/src/com/donkfish/core/client/widget/clipboard/ZeroClipboard.css" />
+        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.css" />
+        <option value="$PROJECT_DIR$/war/index.jsp" />
+        <option value="$PROJECT_DIR$/war/tools.jsp" />
+        <option value="$PROJECT_DIR$/war/_footer.jsp" />
+        <option value="$PROJECT_DIR$/src/com/donkfish/core/client/helpers/Analytics.java" />
+        <option value="$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.java" />
       </list>
     </option>
   </component>
@@ -254,7 +236,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -282,7 +264,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,197 +314,11 @@
               <option name="myItemId" value="donkfish" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donkfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Favorites" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -554,14 +350,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Remote.GWT">
-    <configuration default="true" type="PhpRunConfigurationType" factoryName="PHP">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="FtpUpload" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <method>
         <option name="AntTarget" enabled="false" />
@@ -664,7 +452,10 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="FtpUpload" enabled="false" />
+        <option name="FtpUpload" enabled="false">
+          <server_id />
+          <server_name />
+        </option>
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -730,7 +521,6 @@
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="LAST_MERGED_REVISION" />
-    <option name="UPDATE_RUN_STATUS" value="false" />
     <option name="MERGE_DRY_RUN" value="false" />
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
@@ -739,6 +529,7 @@
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
     <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
@@ -762,17 +553,17 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2835709" sideWeight="0.17810026" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12378094" sideWeight="0.17810026" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -790,6 +581,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="Set of basic tools plus working service endpoint" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -849,127 +641,125 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/tools/ToolsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/RandomNumberTool.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/ToolWidgetFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/NumberListTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Math.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="25" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/module.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/WEB-INF/stax-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/server/servlets/ToolsMappingServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishRemoteServiceAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="25" selection-start="627" selection-end="627" vertical-scroll-proportion="-13.090909">
-          <folding />
-        </state>
+        <state line="18" column="25" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donkfish/server/services/DonkfishServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/tools/ToolsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="35" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishRemoteService.java">
+    <entry file="file://$PROJECT_DIR$/war/ZeroClipboard/_zc.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/services/DonkfishService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/widget/clipboard/ZeroClipboard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
+        <state line="19" column="173" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1306891542000" expanded="true" signature="1516:1550" placeholder="{...}" />
+            <marker date="1306891542000" expanded="true" signature="1638:1826" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/numbers/RandomNumberTool.java">
+    <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/widget/clipboard/ZeroClipboard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="12" column="19" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="1" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/SpringTextBoxTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="20" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="926" selection-end="926" vertical-scroll-proportion="8.131147">
+        <state line="34" column="6" selection-start="1225" selection-end="1225" vertical-scroll-proportion="-12.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/_footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="91" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/_siteStyles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="21" selection-start="289" selection-end="289" vertical-scroll-proportion="-5.76">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/tools.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="10" selection-start="601" selection-end="601" vertical-scroll-proportion="-5.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/_ga.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donkfish/core/client/helpers/Analytics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="5" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1306894523000" expanded="true" signature="350:514" placeholder="{...}" />
+            <marker date="1306894523000" expanded="true" signature="570:709" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donkfish/tools/client/tools/textcount/TextCountTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="99" selection-start="2126" selection-end="2126" vertical-scroll-proportion="6.2325583">
           <folding />
         </state>
       </provider>

@@ -3,5 +3,10 @@
 }
 
 .statsPanel {
+    margin-top: 15px;
+}
 
+.instructions {
+    font-size:12pt;
+    margin-bottom: 10px;
 }

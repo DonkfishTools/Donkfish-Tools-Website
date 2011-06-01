@@ -17,7 +17,9 @@ public class ZeroClipboard extends Composite {
 
     public ZeroClipboard() {
 
-        initWidget(new HTML("<div id=\"" + clipContainerId + "\" style=\"position:relative\"> <div id=\"" + clipButtonId + "\" class=\"my_clip_button\"><b>Copy To Clipboard...</b></div> </div>"));
+        HTML html = new HTML("<div id=\"" + clipContainerId + "\" style=\"position:relative\"> <div id=\"" + clipButtonId + "\" class=\"my_clip_button\">Copy To Clipboard...</div> </div>");
+        html.addStyleName(RES.styles().mainHtmlBlock());
+        initWidget(html);
     }
 
     @Override
@@ -55,6 +57,8 @@ public class ZeroClipboard extends Composite {
 
     static interface Styles extends CssResource {
 
+
+        String mainHtmlBlock();
     }
 
     static interface Resources extends ClientBundle {

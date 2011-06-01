@@ -23,19 +23,19 @@
     <p>
         <% out.write(tool.getToolDescriptionHtml()); %>
     </p>
-    <h2>Related Tools</h2>
+    <%--<h2>Related Tools</h2>--%>
 
-    <ul>
-        <li><a href="">Some Tool2</a></li>
-        <li><a href="">Some Tool</a></li>
-        <li><a href="">Some Tool</a></li>
-        <li><a href="">Some Tool</a></li>
-    </ul>
+    <%--<ul>--%>
+        <%--<li><a href="">Some Tool2</a></li>--%>
+        <%--<li><a href="">Some Tool</a></li>--%>
+        <%--<li><a href="">Some Tool</a></li>--%>
+        <%--<li><a href="">Some Tool</a></li>--%>
+    <%--</ul>--%>
 </div>
 <input type="hidden" name="<% out.write(HtmlVariables.KEY); %>" id="<% out.write(HtmlVariables.KEY); %>" value="<% out.write(request.getParameter(HtmlVariables.KEY)); %>" />
 <div class="bd" id="<% out.write(HtmlVariables.ROOT_PANEL_MAIN); %>">
 
 </div>
-
+<jsp:include page="_footer.jsp"/>
 </body>
 </html>

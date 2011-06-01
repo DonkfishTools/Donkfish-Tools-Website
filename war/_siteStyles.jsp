@@ -2,6 +2,7 @@
     * {margin:0; padding:0;}
     body { font-family:arial; font-size:13px; }
     a { color:#263c6d }
+    h1 { color:#263c6d; font-size:14pt }
     a:hover { color:#4486BD; }
     #hd { height:42px;
         background-image: -webkit-gradient(
@@ -32,6 +33,7 @@
     #desc li { list-item-style:none; display:inline; }
     #desc li:after { content:", " }
     #desc li:last-child:after { content:"" }
+    .tool_list li { margin-bottom: 5px; }
     .bd {padding:15px;}
 
 

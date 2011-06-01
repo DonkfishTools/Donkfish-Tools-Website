@@ -18,15 +18,20 @@
 </head>
 <body>
 <jsp:include page="_header.jsp"/>
-<ul>
-    <%
+<div style="padding: 10px;">
+    <h1>Donkfish Tools a website with has simple and fast tools to get work done without hassle</h1>
+    <div style="padding-left: 30px;padding-top:10px;">
+    <ul class="tool_list">
+        <%
 
-        for(Map.Entry<String, Tool> tool : ToolsManager.getTools().entrySet())
-        {
-            out.print("<li><a href='/tools/" + tool.getKey() + "'>" + tool.getValue().getToolName() + "</a></li>");
-        }
+            for(Map.Entry<String, Tool> tool : ToolsManager.getTools().entrySet())
+            {
+                out.print("<li><a href='/tools/" + tool.getKey() + "'>" + tool.getValue().getToolName() + "</a> - " + tool.getValue().getToolDescriptionHtml() + "</li>");
+            }
 
-    %>
-</ul>
+        %>
+    </ul>
+        </div>
+</div>
 </body>
 </html>
