@@ -1,8 +1,13 @@
 package com.donkfish.tools.client.tools.casing;
 
-import com.donkfish.tools.client.tools.SpringTextBoxTool;
+import com.donkfish.core.client.model.Command;
+import com.donkfish.core.client.model.CommandResult;
+import com.donkfish.core.client.services.DonkfishService;
+import com.donkfish.tools.client.tools.base.SpringTextBoxTool;
+import com.donkfish.tools.client.tools.results.ResultsPanel;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.TextArea;
-import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class CaseChangeTool extends SpringTextBoxTool {
 
@@ -21,7 +26,7 @@ public class CaseChangeTool extends SpringTextBoxTool {
     }
 
     @Override
-    protected void updateStats(String text, VerticalPanel statsPanel, TextArea textArea) {
+    protected void updateStats(String text, ResultsPanel statsPanel, final TextArea textArea) {
         if(text == null || caseType == null)
             return;
         
@@ -34,10 +39,28 @@ public class CaseChangeTool extends SpringTextBoxTool {
                 textArea.setText(text.toLowerCase());
                 break;
                                     case Title:
-                textArea.setText(toTitleCase(text));
+                                        DonkfishService.sendCommand(new Command(Command.TITLECASE, text), new AsyncCallback<CommandResult>(){
+                                            public void onFailure(Throwable throwable) {
+                                                GWT.log("Failed case tool", throwable);
+                                            }
+
+                                            public void onSuccess(CommandResult commandResult) {
+                                                textArea.setText(toTitleCase(commandResult.getPayLoad()));
+                                            }
+                                        });
+
                 break;
                                                 case Proper:
-                textArea.setText(toProperCase(text));
+                                                    DonkfishService.sendCommand(new Command(Command.PROPERCASE, text), new AsyncCallback<CommandResult>(){
+                                                                                                public void onFailure(Throwable throwable) {
+                                                                                                    GWT.log("Failed case tool", throwable);
+                                                                                                }
+
+                                                                                                public void onSuccess(CommandResult commandResult) {
+                                                                                                    textArea.setText(toTitleCase(commandResult.getPayLoad()));
+                                                                                                }
+                                                                                            });
+
                 break;
         }
 

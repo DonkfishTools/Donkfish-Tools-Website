@@ -18,6 +18,8 @@ public class Main implements EntryPoint {
   public void onModuleLoad() {
     RootPanel panel = RootPanel.get(HtmlVariables.ROOT_PANEL_MAIN);
 
+      ExternalResources.instance.styles().ensureInjected();
+
       if(panel != null)
       {
           String toolKey = Document.get().getElementById(HtmlVariables.KEY).getAttribute("value").toString();

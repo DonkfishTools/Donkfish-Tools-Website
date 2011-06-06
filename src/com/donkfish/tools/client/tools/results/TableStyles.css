@@ -1,0 +1,43 @@
+.mainTableStyle {
+
+}
+
+.even {
+
+}
+
+.odd {
+
+}
+
+
+.mainTableStyle table {
+	border:1px solid #666666;
+	border-collapse:collapse;
+	font-family:arial,sans-serif;
+}
+.mainTableStyle td,th{
+        border:1px solid #666666;
+        border-collapse:collapse;
+    border-left:none;
+     border-right:none;
+        padding:5px;
+    }
+@sprite .mainTableStyle caption{
+	border:1px solid #666666;
+	border-bottom:none;
+	padding:5px;
+	text-align:left;
+    font-weight:bold;
+    color: #1f1e1e;
+    gwt-image: "mainTableStyleGradient";
+}
+
+.mainTableStyle tbody td{
+	background: #ffffff;
+}
+
+.mainTableStyle tbody tr.odd td{
+	background: #e8e6e6;
+}
+

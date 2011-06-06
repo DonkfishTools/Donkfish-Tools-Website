@@ -37,5 +37,5 @@
     .bd {padding:15px;}
 
 
-    .gwt-Image {border:0}
+
 </style>

@@ -1,7 +1,7 @@
-package com.donkfish.tools.client.tools;
+package com.donkfish.tools.client.tools.base;
 
 import com.donkfish.core.client.helpers.SpringHelper;
-import com.donkfish.core.client.widget.progress.LoadingSmall;
+import com.donkfish.tools.client.tools.results.ResultsPanel;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
@@ -10,8 +10,7 @@ import com.google.gwt.user.client.ui.*;
 public class SpringTextBoxTool extends Composite {
     VerticalPanel mainPanel = new VerticalPanel();
     TextArea textArea;
-    VerticalPanel statsPanel;
-    LoadingSmall loading;
+    ResultsPanel statsPanel = new ResultsPanel();
 
     public SpringTextBoxTool() {
 
@@ -27,30 +26,29 @@ public class SpringTextBoxTool extends Composite {
         textArea = new TextArea();
         textArea.setHeight("300px");
         textArea.setWidth("500px");
+        statsPanel.setWidth("100%");
         textArea.addStyleName(BASE_RES.styles().textArea());
 
         SpringHelper.attachSpring(textArea, 400, new SpringHelper.SpringCallback() {
             public void run() {
                 updateStats(textArea.getText(), statsPanel, textArea);
-                loading.showBody();
+                statsPanel.clearLoading();
             }
 
             public void activity() {
-                loading.showLoading();
+                statsPanel.showLoading();
             }
         });
 
         mainPanel.add(textArea);
 
-        statsPanel = new VerticalPanel();
         statsPanel.addStyleName(BASE_RES.styles().statsPanel());
         textArea.addStyleName(BASE_RES.styles().statsPanel());
+
         updateStats(textArea.getText(), statsPanel, textArea);
 
 
-        loading = new LoadingSmall(statsPanel);
-
-        mainPanel.add(loading);
+        mainPanel.add(statsPanel);
         initWidget(mainPanel);
     }
 
@@ -58,7 +56,7 @@ public class SpringTextBoxTool extends Composite {
         return null;
     }
 
-    protected void updateStats(String text, VerticalPanel statsPanel, TextArea textArea) {
+    protected void updateStats(String text, ResultsPanel statsPanel, TextArea textArea) {
 
     }
 

@@ -8,11 +8,6 @@ public class StringCounter {
 
     private int total = 0;
 
-    public int getUnique() {
-        return unique;
-    }
-
-    private int unique = 0;
     private StringCountValue[] values = null;
 
     public StringCounter(String[] strs)

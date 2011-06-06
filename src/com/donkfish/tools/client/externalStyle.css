@@ -1,0 +1,5 @@
+@external .gwt-Image;
+.gwt-Image {border:0}
+
+@external .gwt-TextArea;
+.gwt-TextArea {padding:0}

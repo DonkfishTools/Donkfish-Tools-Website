@@ -64,10 +64,10 @@ public class ToolsManager {
 //            tools.put(TOOL_KEY_MODE_TOOL, new Tool("Mode Tool", "Add up all the numbers in a list", ""));
 //            tools.put(TOOL_KEY_SORT_TOOL, new Tool("Sort Tool", "Add up all the numbers in a list", ""));
 //            tools.put(TOOL_KEY_RANDOMIZE_TOOL, new Tool("Randomize Tool", "Add up all the numbers in a list", ""));
-//            tools.put(TOOL_KEY_UPPERCASE_TOOL, new Tool("Uppercase Text", "Add up all the numbers in a list", ""));
-//            tools.put(TOOL_KEY_LOWERCASE_TOOL, new Tool("Lowercase Text", "Add up all the numbers in a list", ""));
-//            tools.put(TOOL_KEY_TITLECASE_TOOL, new Tool("Title Text", "Add up all the numbers in a list", ""));
-//            tools.put(TOOL_KEY_PROPERCASE_TOOL, new Tool("Proper Text", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_UPPERCASE_TOOL, new Tool("Uppercase Text", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_LOWERCASE_TOOL, new Tool("Lowercase Text", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_TITLECASE_TOOL, new Tool("Title Text", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_PROPERCASE_TOOL, new Tool("Proper Text", "Add up all the numbers in a list", ""));
 //            tools.put(TOOL_KEY_BASE64_ENCODER_TOOL, new Tool("Base64 Encoder", "Add up all the numbers in a list", ""));
 //            tools.put(TOOL_KEY_BASE64_DECODER_TOOL, new Tool("Base64 Encoder", "Add up all the numbers in a list", ""));
 //            tools.put(TOOL_KEY_HTML_ENCODER, new Tool("HTML Encoder", "Add up all the numbers in a list", ""));

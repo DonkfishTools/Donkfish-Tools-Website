@@ -15,9 +15,9 @@ public class ZeroClipboard extends Composite {
     JavaScriptObject clip;
     private String str = "";
 
-    public ZeroClipboard() {
+    public ZeroClipboard(String text) {
 
-        HTML html = new HTML("<div id=\"" + clipContainerId + "\" style=\"position:relative\"> <div id=\"" + clipButtonId + "\" class=\"my_clip_button\">Copy To Clipboard...</div> </div>");
+        HTML html = new HTML("<div id=\"" + clipContainerId + "\" style=\"position:relative\"> <div id=\"" + clipButtonId + "\" class=\"my_clip_button\">"+ text + "</div> </div>");
         html.addStyleName(RES.styles().mainHtmlBlock());
         initWidget(html);
     }

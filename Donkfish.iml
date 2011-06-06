@@ -30,7 +30,6 @@
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/war/WEB-INF/classes" />
       <excludeFolder url="file://$MODULE_DIR$/war/WEB-INF/deploy" />
-      <excludeFolder url="file://$MODULE_DIR$/war/WEB-INF/lib" />
       <excludeFolder url="file://$MODULE_DIR$/war/t" />
     </content>
     <orderEntry type="inheritedJdk" />

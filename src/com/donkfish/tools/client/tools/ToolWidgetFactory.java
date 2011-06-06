@@ -15,7 +15,7 @@ public class ToolWidgetFactory {
 
     public static Widget getWidget(String toolKey)
     {
-        if(toolKey.equals(ToolsManager.TOOL_KEY_WORD_COUNT) || toolKey.equals(ToolsManager.TOOL_KEY_CHAR_COUNT))
+        if(toolKey.equals(ToolsManager.TOOL_KEY_WORD_COUNT) || toolKey.equals(ToolsManager.TOOL_KEY_CHAR_COUNT) || toolKey.equals(ToolsManager.TOOL_KEY_LETTER_COUNT))
                 return new TextCountTool();
 
         if(toolKey.equals(ToolsManager.TOOL_KEY_TABLE_CREATOR))
@@ -39,7 +39,7 @@ public class ToolWidgetFactory {
                                 if(toolKey.equals(ToolsManager.TOOL_KEY_RANDOM_NUMBER))
                 return new RandomNumberTool();
 
-        if(toolKey.equals(ToolsManager.TOOL_KEY_UPPERCASE_TOOL) || toolKey.equals(ToolsManager.TOOL_KEY_LOWERCASE_TOOL))
+        if(toolKey.equals(ToolsManager.TOOL_KEY_UPPERCASE_TOOL) || toolKey.equals(ToolsManager.TOOL_KEY_LOWERCASE_TOOL) || toolKey.equals(ToolsManager.TOOL_KEY_TITLECASE_TOOL))
                 return new CodePrettyTool();
 
         if(toolKey.equals(ToolsManager.TOOL_KEY_MEAN_TOOL) || toolKey.equals(ToolsManager.TOOL_KEY_MEAN_TOOL)|| toolKey.equals(ToolsManager.TOOL_KEY_MEDIAN_TOOL)|| toolKey.equals(ToolsManager.TOOL_KEY_MODE_TOOL)|| toolKey.equals(ToolsManager.TOOL_KEY_SUM_TOOL))

@@ -150,7 +150,7 @@
     
   <target name="stax-classpath">
     <property environment="env"/>
-      <property name="stax.home" value="bees"/>
+      <property name="stax.home" value="${env.BEES_HOME}"/>
       <echo message="stax home: ${stax.home}"/>
       
       <path id="staxtasks.class.path">

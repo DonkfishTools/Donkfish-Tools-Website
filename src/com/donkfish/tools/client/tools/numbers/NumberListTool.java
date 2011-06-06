@@ -1,6 +1,7 @@
 package com.donkfish.tools.client.tools.numbers;
 
-import com.donkfish.tools.client.tools.SpringTextBoxTool;
+import com.donkfish.tools.client.tools.base.SpringTextBoxTool;
+import com.donkfish.tools.client.tools.results.ResultsPanel;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
@@ -12,7 +13,7 @@ import java.util.Collections;
 public class NumberListTool extends SpringTextBoxTool {
 
     @Override
-    protected void updateStats(String text, VerticalPanel statsPanel, TextArea textArea) {
+    protected void updateStats(String text, ResultsPanel statsPanel, TextArea textArea) {
 
         statsPanel.clear();
 
