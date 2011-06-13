@@ -62,8 +62,8 @@ public class ToolsManager {
 //            tools.put(TOOL_KEY_MEAN_TOOL, new Tool("Mean Tool", "Add up all the numbers in a list", ""));
 //            tools.put(TOOL_KEY_MEDIAN_TOOL, new Tool("Medium Tool", "Add up all the numbers in a list", ""));
 //            tools.put(TOOL_KEY_MODE_TOOL, new Tool("Mode Tool", "Add up all the numbers in a list", ""));
-//            tools.put(TOOL_KEY_SORT_TOOL, new Tool("Sort Tool", "Add up all the numbers in a list", ""));
-//            tools.put(TOOL_KEY_RANDOMIZE_TOOL, new Tool("Randomize Tool", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_SORT_TOOL, new Tool("Sort Tool", "Add up all the numbers in a list", ""));
+            tools.put(TOOL_KEY_RANDOMIZE_TOOL, new Tool("Randomize Tool", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_UPPERCASE_TOOL, new Tool("Uppercase Text", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_LOWERCASE_TOOL, new Tool("Lowercase Text", "Add up all the numbers in a list", ""));
             tools.put(TOOL_KEY_TITLECASE_TOOL, new Tool("Title Text", "Add up all the numbers in a list", ""));

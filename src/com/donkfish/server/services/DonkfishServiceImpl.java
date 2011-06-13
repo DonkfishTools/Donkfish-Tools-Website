@@ -29,7 +29,38 @@ public class DonkfishServiceImpl extends RemoteServiceServlet implements
         if(command.getMethod() == Command.TITLECASE)
             return new CommandResult(WordUtils.capitalizeFully(StringUtils.lowerCase(command.getText())));
         else if(command.getMethod() == Command.PROPERCASE)
-            return new CommandResult(WordUtils.capitalizeFully(StringUtils.lowerCase(command.getText()), '.', '!', '?'));
+            return new CommandResult(getProperCase(command.getText()));
         return null;
+    }
+
+    private String getProperCase(String text) {
+        String lowerCaseText =  StringUtils.lowerCase(text);
+
+
+        lowerCaseText = lowerCaseText.replace(">", "&great;");
+        lowerCaseText = lowerCaseText.replace("<", "&less;");
+        lowerCaseText = lowerCaseText.replace("*", "&star;");
+
+
+        lowerCaseText = lowerCaseText.replaceAll("\\.\\s*", ">");
+        lowerCaseText = lowerCaseText.replaceAll("!\\s*", "<");
+        lowerCaseText = lowerCaseText.replaceAll("\\?\\s*", "*");
+
+        lowerCaseText = WordUtils.capitalizeFully(lowerCaseText, '>', '<', '*');
+
+        lowerCaseText = lowerCaseText.replace(">", ". ");
+        lowerCaseText = lowerCaseText.replace("<", "! ");
+        lowerCaseText = lowerCaseText.replace("*", "? ");
+
+        lowerCaseText = lowerCaseText.replace("&great;", ">");
+        lowerCaseText = lowerCaseText.replace("&less;", "<");
+        lowerCaseText = lowerCaseText.replace("&star;", "*");
+
+        lowerCaseText = lowerCaseText.replace(" i ", " I ");
+        lowerCaseText = lowerCaseText.replace(" i'm ", " I'm ");
+        lowerCaseText = lowerCaseText.replace(" i'll ", " I'll ");
+
+        
+        return lowerCaseText;
     }
 }
