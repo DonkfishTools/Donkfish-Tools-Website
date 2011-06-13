@@ -2,6 +2,7 @@ package com.donkfish.tools.client.tools;
 
 import com.donkfish.core.client.tools.ToolsManager;
 import com.donkfish.tools.client.tools.casing.CaseChangeTool;
+import com.donkfish.tools.client.tools.encoder.*;
 import com.donkfish.tools.client.tools.html.TableGenerator;
 import com.donkfish.tools.client.tools.lists.ListTool;
 import com.donkfish.tools.client.tools.numbers.NumberListTool;
@@ -47,6 +48,22 @@ public class ToolWidgetFactory {
 
         if(toolKey.equals(ToolsManager.TOOL_KEY_SORT_TOOL) || toolKey.equals(ToolsManager.TOOL_KEY_RANDOMIZE_TOOL))
                 return new ListTool();
+
+                if(toolKey.equals(ToolsManager.TOOL_KEY_BASE64_DECODER_TOOL) || toolKey.equals(ToolsManager.TOOL_KEY_BASE64_ENCODER_TOOL))
+                return new Base64EncoderTool();
+
+                        if(toolKey.equals(ToolsManager.TOOL_KEY_HTML_ENCODER) || toolKey.equals(ToolsManager.TOOL_KEY_HTML_DECODER))
+                return new HtmlEncoderTool();
+
+                        if(toolKey.equals(ToolsManager.TOOL_KEY_XML_ENCODER) || toolKey.equals(ToolsManager.TOOL_KEY_XML_DECODER))
+                return new XmlEncoderTool();
+
+                                if(toolKey.equals(ToolsManager.TOOL_KEY_CSV_ENCODER) || toolKey.equals(ToolsManager.TOOL_KEY_CSV_DECODER))
+                return new CsvEscapeTool();
+                                if(toolKey.equals(ToolsManager.TOOL_KEY_JAVA_ENCODER) || toolKey.equals(ToolsManager.TOOL_KEY_JAVA_DECODER))
+                return new JavaEscapeTool();
+                                if(toolKey.equals(ToolsManager.TOOL_KEY_JS_ENCODER) || toolKey.equals(ToolsManager.TOOL_KEY_JS_DECODER))
+                return new JSEscapeTool();
 
         return new HTML("No tool found");
 
