@@ -12,5 +12,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 public interface DonkfishRemoteService extends RemoteService {
   String greetServer(String name);
 
-    CommandResult sendCommand(Command command);
+    CommandResult sendCommand(Command command) throws Exception;
 }

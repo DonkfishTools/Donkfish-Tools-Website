@@ -21,6 +21,12 @@ public class Command implements Serializable {
     public static final Integer DECODE_JS = 12;
     public static final Integer ENCODE_CSV = 13;
     public static final Integer DECODE_CSV = 14;
+    public static final int MD5 = 15;
+    public static final int SHA1 = 16;
+    public static final int URL_ENCODE = 17;
+    public static final Integer URL_DECODE = 18;
+    public static final int DECODE_REGEX = 19;
+    public static final int ENCODE_REGEX = 19;
 
     public Command(Integer method, String text) {
         this.method = method;

@@ -4,7 +4,11 @@ import com.donkfish.core.client.model.Command;
 import com.donkfish.core.client.model.CommandResult;
 import com.donkfish.core.client.services.DonkfishRemoteService;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import org.apache.commons.codec.DecoderException;
+import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.codec.net.URLCodec;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.text.WordUtils;
@@ -12,6 +16,7 @@ import org.apache.commons.lang3.text.WordUtils;
 
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.regex.Pattern;
 
 /**
  * The server side implementation of the RPC service.
@@ -27,7 +32,7 @@ public class DonkfishServiceImpl extends RemoteServiceServlet implements
         + ".<br><br>It looks like you are using:<br>" + userAgent;
   }
 
-    public CommandResult sendCommand(Command command) {
+    public CommandResult sendCommand(Command command) throws Exception {
         System.out.println(command.getMethod() + " :: " + command.getText());
         CommandResult result = processCommand(command);
 
@@ -36,7 +41,7 @@ public class DonkfishServiceImpl extends RemoteServiceServlet implements
 
     }
 
-    private CommandResult processCommand(Command command) {
+    private CommandResult processCommand(Command command) throws Exception {
  if(command.getMethod() == Command.TITLECASE)
             return new CommandResult(WordUtils.capitalizeFully(StringUtils.lowerCase(command.getText())));
         else if(command.getMethod() == Command.PROPERCASE)
@@ -65,6 +70,18 @@ public class DonkfishServiceImpl extends RemoteServiceServlet implements
             return new CommandResult(StringEscapeUtils.escapeCsv(command.getText()));
                         else if(command.getMethod() == Command.DECODE_CSV)
             return new CommandResult(StringEscapeUtils.unescapeCsv(command.getText()));
+                                else if(command.getMethod() == Command.MD5)
+            return new CommandResult(DigestUtils.md5Hex(command.getText()));
+                                        else if(command.getMethod() == Command.SHA1)
+            return new CommandResult(DigestUtils.shaHex(command.getText()));
+                                                else if(command.getMethod() == Command.URL_ENCODE)
+            return new CommandResult(new URLCodec().encode(command.getText()));
+                                                        else if(command.getMethod() == Command.URL_DECODE)
+            return new CommandResult(new URLCodec().decode(command.getText()));
+                                                                else if(command.getMethod() == Command.ENCODE_REGEX)
+            return new CommandResult(Pattern.quote(command.getText()));
+                                                                else if(command.getMethod() == Command.DECODE_REGEX)
+            return new CommandResult(new URLCodec().decode(command.getText()));
         return null;
     }
 

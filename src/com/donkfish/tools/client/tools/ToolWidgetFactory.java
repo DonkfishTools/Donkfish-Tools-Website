@@ -3,6 +3,7 @@ package com.donkfish.tools.client.tools;
 import com.donkfish.core.client.tools.ToolsManager;
 import com.donkfish.tools.client.tools.casing.CaseChangeTool;
 import com.donkfish.tools.client.tools.encoder.*;
+import com.donkfish.tools.client.tools.encrypt.EncryptTool;
 import com.donkfish.tools.client.tools.html.TableGenerator;
 import com.donkfish.tools.client.tools.lists.ListTool;
 import com.donkfish.tools.client.tools.numbers.NumberListTool;
@@ -64,6 +65,16 @@ public class ToolWidgetFactory {
                 return new JavaEscapeTool();
                                 if(toolKey.equals(ToolsManager.TOOL_KEY_JS_ENCODER) || toolKey.equals(ToolsManager.TOOL_KEY_JS_DECODER))
                 return new JSEscapeTool();
+
+        if(toolKey.equals(ToolsManager.TOOL_KEY_MD5_ENCRPTOR) || toolKey.equals(ToolsManager.TOOL_KEY_SHA1_ENCRPTOR))
+            return new EncryptTool();
+
+                if(toolKey.equals(ToolsManager.TOOL_KEY_URL_ENCODER) || toolKey.equals(ToolsManager.TOOL_KEY_URL_DECODER))
+            return new URLEncoder();
+
+                        if(toolKey.equals(ToolsManager.TOOL_KEY_REGEX_ENCODER) || toolKey.equals(ToolsManager.TOOL_KEY_REGEX_DECODER))
+            return new RegexEncoder();
+
 
         return new HTML("No tool found");
 
